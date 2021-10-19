@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="subcontainer">
+            <div class="general-information">
+                <form action="succ.html">
+                    <h2 class="G-i">General Information</h2>
+                    <br />
+                    <div class="title-a">
+                        <input class="title" type="text" placeholder="Title" />
+                    </div>
+
+                    <br />
+                    <div class="names-a">
+                        <input class="text" type="text" placeholder="First Name" />
+
+                        <input class="text" type="text" placeholder="Last Name" />
+                    </div>
+
+                    <br />
+
+                    <div class="position-a">
+                        <input class="position" type="text" placeholder="Position" />
+                    </div>
+
+                    <br />
+
+                    <div class="company-a">
+                        <input class="company" type="text" placeholder="Company" />
+                    </div>
+
+                    <br />
+
+                    <div class="business-arena-employees-a">
+                        <input class="text" type="text" placeholder="Business" />
+
+                        <input class="text" type="text" placeholder="Last Name" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact-details">
+                <h2 class="c-details">Contact Details</h2>
+
+                <form action="#" onsubmit="return validation()">
+                    <br />
+                    <div class="title-a">
+                        <input class="stret" type="text" placeholder="Street + Nr" />
+                    </div>
+
+                    <br />
+
+                    <div class="title-a">
+                        <input class="add" type="text" placeholder="Additional Information" />
+                    </div>
+
+                    <br />
+
+                    <div class="z-and-place">
+                        <input class="z" type="text" placeholder="Zip Code" />
+
+                        <input class="p" type="text" placeholder="Place" />
+                    </div>
+
+                    <br />
+
+                    <div class="c">
+                        <input class="cntry" type="text" placeholder="country" />
+                    </div>
+
+                    <br />
+
+                    <div class="cd-and-ph-nmbr">
+                        <input class="z" type="text" placeholder="Code +" />
+
+                        <input id="phone" class="p" type="number" placeholder="Phone Number" />
+                        <span id="cellnbr" class="txt-red"></span>
+                    </div>
+
+                    <br />
+
+                    <div class="e-m-ail">
+                        <input class="cntry" type="email" placeholder="email" id="eemail" />
+                        <span id="email" class="txt-red"></span>
+                    </div>
+
+                    <br />
+                    <span> I do accept the Terms and conditions of your site. </span>
+
+                    <input type="checkbox" />
+
+                    <br />
+                    <br />
+
+                    <input type="submit" class="submit" value="Register Badge" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        function validation() {
+
+            var phnber = document.getElementById("phone").value;
+            var email = document.getElementById("eemail").value;
+
+
+            if (phnber == "") {
+
+                document.getElementById("cellnbr").innerHTML = "Please fill the Phone number";
+
+
+
+            }
+
+            if (isNaN(phnber)) {
+
+                document.getElementById("cellnbr").innerHTML = "Please write digits only not characters";
+
+
+            }
+
+
+            if (phnber.length != 10) {
+
+                document.getElementById("cellnbr").innerHTML = "Please write 10 digits Cell Number";
+            }
+
+
+
+
+
+
+
+
+
+
+
+            if (email == "") {
+
+                document.getElementById("email").innerHTML = "Please fill the Email";
+
+
+
+
+
+
+            }
+
+
+            if (email.indexOf('@') <= 0) {
+
+                document.getElementById("email").innerHTML = "@ invalid Position";
+
+            }
+
+
+            if ((email.charAt(email.length - 4) != ".") && (email.charAt(email.length - 3) != ".")) {
+
+                document.getElementById("email").innerHTML = "invalid . Position";
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>
